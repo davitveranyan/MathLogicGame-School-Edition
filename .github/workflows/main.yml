@@ -1,0 +1,21 @@
+name: Build Installer (Inno)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-windows-installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Inno Setup
+        run: choco install innosetup -y
+      - name: Run build script
+        shell: cmd
+        run: scripts\build_inno_installer.bat
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: MathLogicGameInstaller
+          path: '%USERPROFILE%\Desktop\MathLogicGameSchool_Setup.exe'
