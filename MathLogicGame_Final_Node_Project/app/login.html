@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Login - MathLogicGame</title>
+<link rel="stylesheet" href="./styles/login.css"/></head>
+<body>
+  <div class="login-container">
+    <div class="logo"><img src="./assets/icons/school_icon_256.png" alt="logo" /><h1>Մաթեմատիկական տրամաբանական խաղ – Դպրոցական տարբերակ</h1></div>
+    <div class="role-buttons">
+      <button id="roleStudent">👦 Ученик / Student</button>
+      <button id="roleTeacher">👩‍🏫 Преподаватель / Teacher</button>
+      <button id="roleAdmin">🔑 Администратор / Admin</button>
+    </div>
+    <div id="formArea"></div>
+  </div>
+<script>
+async function loadClasses(){ const resp = await fetch('./data/classes.json'); const j = await resp.json(); return j.classes || []; }
+function createStudentForm(classes){ const container = document.createElement('div'); container.innerHTML = `
+<form id="studentForm">
+<label>Имя / First name</label><input id="firstName" required />
+<label>Фамилия / Last name</label><input id="lastName" required />
+<label>Пол / Gender</label><select id="gender"><option value="male">М</option><option value="female">Ж</option></select>
+<label>Возраст / Age</label><input id="age" type="number" min="5" max="18" required />
+<label>Класс / Class</label><select id="classSelect">${classes.map(c=>' <option value="'+c.id+'">'+c.name+'</option>').join('')}</select>
+<label>Преподаватель / Teacher</label><input id="teacher" placeholder="optional" />
+<div style="margin-top:12px"><button type="submit">Начать</button></div>
+</form>`; return container; }
+function createLoginForm(role){ const container = document.createElement('div'); container.innerHTML = `<form id="${role}Form"><label>Логин</label><input id="login" required/><label>Пароль</label><input id="pwd" type="password" required/><div style="margin-top:12px"><button type="submit">Войти</button></div></form>`; return container; }
+document.getElementById('roleStudent').addEventListener('click', async ()=>{ const classes = await loadClasses(); const form = createStudentForm(classes); const area = document.getElementById('formArea'); area.innerHTML=''; area.appendChild(form); document.getElementById('studentForm').addEventListener('submit', e=>{ e.preventDefault(); const profile={firstName:document.getElementById('firstName').value, lastName:document.getElementById('lastName').value, gender:document.getElementById('gender').value, age:parseInt(document.getElementById('age').value), classId:document.getElementById('classSelect').value, teacher:document.getElementById('teacher').value }; localStorage.setItem('mlg_profile', JSON.stringify(profile)); window.location='index.html'; }); });
+document.getElementById('roleTeacher').addEventListener('click', async ()=>{ const area = document.getElementById('formArea'); area.innerHTML=''; area.appendChild(createLoginForm('teacher')); document.getElementById('teacherForm').addEventListener('submit', e=>{ e.preventDefault(); alert('Teacher login demo (implement auth)'); }); });
+document.getElementById('roleAdmin').addEventListener('click', async ()=>{ const area = document.getElementById('formArea'); area.innerHTML=''; area.appendChild(createLoginForm('admin')); document.getElementById('adminForm').addEventListener('submit', e=>{ e.preventDefault(); alert('Admin login demo (implement auth)'); }); });
+</script>
+</body></html>

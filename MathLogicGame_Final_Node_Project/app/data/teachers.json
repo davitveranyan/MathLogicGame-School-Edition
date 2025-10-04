@@ -1,0 +1,11 @@
+{
+  "teachers": [
+    {
+      "id": "t1",
+      "username": "teacher1",
+      "name": "Anna Petrosyan",
+      "classId": "1A",
+      "password": "$default$"
+    }
+  ]
+}

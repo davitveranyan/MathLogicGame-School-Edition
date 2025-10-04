@@ -1,0 +1,1 @@
+During install you should run scripts\build_installer.bat to create admin.json in user's Documents with default password 'Administrator' and firstLogin true. Replace with hashed password handling for production.

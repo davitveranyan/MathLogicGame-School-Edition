@@ -1,0 +1,184 @@
+{
+  "classes": [
+    {
+      "id": "1A",
+      "grade": 1,
+      "name": "1A"
+    },
+    {
+      "id": "1B",
+      "grade": 1,
+      "name": "1B"
+    },
+    {
+      "id": "1C",
+      "grade": 1,
+      "name": "1C"
+    },
+    {
+      "id": "2A",
+      "grade": 2,
+      "name": "2A"
+    },
+    {
+      "id": "2B",
+      "grade": 2,
+      "name": "2B"
+    },
+    {
+      "id": "2C",
+      "grade": 2,
+      "name": "2C"
+    },
+    {
+      "id": "3A",
+      "grade": 3,
+      "name": "3A"
+    },
+    {
+      "id": "3B",
+      "grade": 3,
+      "name": "3B"
+    },
+    {
+      "id": "3C",
+      "grade": 3,
+      "name": "3C"
+    },
+    {
+      "id": "4A",
+      "grade": 4,
+      "name": "4A"
+    },
+    {
+      "id": "4B",
+      "grade": 4,
+      "name": "4B"
+    },
+    {
+      "id": "4C",
+      "grade": 4,
+      "name": "4C"
+    },
+    {
+      "id": "5A",
+      "grade": 5,
+      "name": "5A"
+    },
+    {
+      "id": "5B",
+      "grade": 5,
+      "name": "5B"
+    },
+    {
+      "id": "5C",
+      "grade": 5,
+      "name": "5C"
+    },
+    {
+      "id": "6A",
+      "grade": 6,
+      "name": "6A"
+    },
+    {
+      "id": "6B",
+      "grade": 6,
+      "name": "6B"
+    },
+    {
+      "id": "6C",
+      "grade": 6,
+      "name": "6C"
+    },
+    {
+      "id": "7A",
+      "grade": 7,
+      "name": "7A"
+    },
+    {
+      "id": "7B",
+      "grade": 7,
+      "name": "7B"
+    },
+    {
+      "id": "7C",
+      "grade": 7,
+      "name": "7C"
+    },
+    {
+      "id": "8A",
+      "grade": 8,
+      "name": "8A"
+    },
+    {
+      "id": "8B",
+      "grade": 8,
+      "name": "8B"
+    },
+    {
+      "id": "8C",
+      "grade": 8,
+      "name": "8C"
+    },
+    {
+      "id": "9A",
+      "grade": 9,
+      "name": "9A"
+    },
+    {
+      "id": "9B",
+      "grade": 9,
+      "name": "9B"
+    },
+    {
+      "id": "9C",
+      "grade": 9,
+      "name": "9C"
+    },
+    {
+      "id": "10A",
+      "grade": 10,
+      "name": "10A"
+    },
+    {
+      "id": "10B",
+      "grade": 10,
+      "name": "10B"
+    },
+    {
+      "id": "10C",
+      "grade": 10,
+      "name": "10C"
+    },
+    {
+      "id": "11A",
+      "grade": 11,
+      "name": "11A"
+    },
+    {
+      "id": "11B",
+      "grade": 11,
+      "name": "11B"
+    },
+    {
+      "id": "11C",
+      "grade": 11,
+      "name": "11C"
+    },
+    {
+      "id": "12A",
+      "grade": 12,
+      "name": "12A"
+    },
+    {
+      "id": "12B",
+      "grade": 12,
+      "name": "12B"
+    },
+    {
+      "id": "12C",
+      "grade": 12,
+      "name": "12C"
+    }
+  ]
+}

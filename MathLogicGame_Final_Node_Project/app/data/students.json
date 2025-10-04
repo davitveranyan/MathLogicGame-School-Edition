@@ -1,0 +1,12 @@
+{
+  "students": [
+    {
+      "id": "s1",
+      "firstName": "Narek",
+      "lastName": "Sargsyan",
+      "classId": "1A",
+      "age": 7,
+      "gender": "male"
+    }
+  ]
+}
